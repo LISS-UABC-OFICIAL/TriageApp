@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Details"
+        android:icon="@drawable/registros_selector"
+        android:title="Detalles" />
+    <item
+        android:id="@+id/StaffList"
+        android:icon="@drawable/personal_selector"
+        android:title="Personal"/>
+    <!--
+    <item
+        android:id="@+id/mapa"
+        android:icon="@drawable/mapa_selector"
+        android:title="Mapa"/>
+    <item
+        android:id="@+id/historial"
+        android:icon="@drawable/registros_selector"
+        android:title="Registros"/>
+    -->
+
+</menu>

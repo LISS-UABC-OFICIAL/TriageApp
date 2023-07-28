@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetailsFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nombre: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtEmergencyName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nombre de la Emergencia"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditName"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                tools:visibility="visible">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ubicacion: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtEmLocation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ubicacion de la emergencia"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditLocation"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                android:visibility="gone">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fecha de Registro: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtRegisterDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="9999-12-31 23:59:59"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditDate"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                android:visibility="gone">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tipo de Emergencia: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/txtEmType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Incendio"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditType"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                tools:visibility="visible">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:id="@+id/textView13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Identificador Secundario: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/txtEmType2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Multiples Victimas"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditTypeSec"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                tools:visibility="visible">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/CloseLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="280dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="20dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fecha de Cierre: "
+                                    android:textColor="#127BCB"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/txtFechaCierre"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="9999-12-31 23:59:59"
+                                    android:textColor="#094886"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivEditCierre"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_icono_editar"
+                                android:visibility="gone">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

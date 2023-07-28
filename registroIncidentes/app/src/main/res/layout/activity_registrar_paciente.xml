@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/fondo_rectangular">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Herido"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#127BCB"
+            android:layout_marginTop="6dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/ic_icono_fondo_foto"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/titleColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color Triage:"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textColor="#127BCB"
+                android:textStyle="bold"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:background="#E9F1F5"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rgColores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E9F1F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_icono_rb_negro" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/rbNegro"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:button="@drawable/custom_icon"
+                            android:layoutDirection="rtl"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Negro"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_icono_rb_rojo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+
+                        <RadioButton
+                            android:id="@+id/rbRojo"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:button="@drawable/custom_icon"
+                            android:layoutDirection="rtl"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Rojo"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp"
+                            android:checked="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_icono_rb_amarillo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+
+                        <RadioButton
+                            android:id="@+id/rbAmarillo"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:button="@drawable/custom_icon"
+                            android:layoutDirection="rtl"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Amarillo"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_icono_rb_verde" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+
+                        <RadioButton
+                            android:id="@+id/rbVerde"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:button="@drawable/custom_icon"
+                            android:layoutDirection="rtl"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Verde"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_icono_rb_contaminacion" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+
+                        <Spinner
+                            android:id="@+id/rbContaminacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/spinner_fondo"
+                            android:foregroundTint="#127BCB"
+                            android:popupBackground="@drawable/fondo_redondeado"
+                            android:spinnerMode="dropdown"
+                            android:text="Contaminantes"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp"/>
+
+                        <!--<RadioButton
+                            android:id="@+id/rbContaminacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:button="@drawable/custom_icon"
+                            android:layoutDirection="rtl"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Contaminantes"
+                            android:textColor="#127BCB"
+                            android:textSize="17sp" />-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginBottom="2dp"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="250dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_icono_guardar"
+                    android:onClick="Guardar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

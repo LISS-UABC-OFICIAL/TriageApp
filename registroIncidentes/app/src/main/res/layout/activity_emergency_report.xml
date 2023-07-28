@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9F1F5">
+
+    <include
+        android:id="@+id/toolbarMn"
+        layout="@layout/toolbar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/fondo_rectangular">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvEspera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Reportar una emergencia"
+            android:textAlignment="center"
+            android:textColor="#127BCB"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la Emergencia:"
+            android:textColor="#094886"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/etEmName"
+            android:layout_width="370dp"
+            android:layout_height="45dp"
+            android:textColorHint="#B47BA2A8"
+            android:inputType="text"
+            android:background="@drawable/fondo_redondeado"
+            android:drawableLeft="@drawable/ic_icon_siren"
+            android:drawablePadding="10dp"
+            android:textSize="16dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#127BCB"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicacion:"
+            android:textColor="#094886"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:id="@+id/btnLocation"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="6dp"
+                android:layout_gravity="center"
+                android:onClick="GetLocation"
+                android:background="@drawable/fondo_redondeado"
+                android:src="@drawable/ic_icon_location"/>
+
+            <EditText
+                android:id="@+id/etEmLocation"
+                android:layout_width="320dp"
+                android:layout_height="85dp"
+                android:textColorHint="#B47BA2A8"
+                android:background="@drawable/fondo_redondeado"
+                android:drawablePadding="10dp"
+                android:textSize="16dp"
+                android:enabled="false"
+                android:textColor="#127BCB"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Emergencia:"
+            android:textColor="#094886"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp" />
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    app:chipIconEnabled="true"
+                    app:chipIcon="@drawable/ic_emergency_fire"
+                    android:textColor="#127BCB"
+                    app:chipStrokeColor="#127BCB"
+                    app:chipStrokeWidth="2dp"
+                    app:chipBackgroundColor="#FFFFFF"
+                    android:text="Incendio"
+                    android:textSize="16dp"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    app:chipIconEnabled="true"
+                    app:chipIcon="@drawable/ic_emergency_car_crash"
+                    android:textColor="#127BCB"
+                    app:chipStrokeColor="#127BCB"
+                    app:chipStrokeWidth="2dp"
+                    app:chipBackgroundColor="#FFFFFF"
+                    android:text="Choque"
+                    android:textSize="16dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    app:chipIconEnabled="true"
+                    app:chipIcon="@drawable/ic_emergency_landslide"
+                    android:textColor="#127BCB"
+                    app:chipStrokeColor="#127BCB"
+                    app:chipStrokeWidth="2dp"
+                    app:chipBackgroundColor="#FFFFFF"
+                    android:text="Derrumbe"
+                    android:textSize="16dp"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identificador Secundario:"
+            android:textColor="#094886"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp" />
+
+        <FrameLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    app:chipIconEnabled="true"
+                    app:chipIcon="@drawable/ic_emergency_toxic"
+                    android:textColor="#127BCB"
+                    app:chipStrokeColor="#127BCB"
+                    app:chipStrokeWidth="2dp"
+                    app:chipBackgroundColor="#FFFFFF"
+                    android:text="Contaminantes Peligrosos"
+                    android:textSize="16dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    app:chipIconEnabled="true"
+                    app:chipIcon="@drawable/ic_emergency_multiple_victims"
+                    android:textColor="#127BCB"
+                    app:chipStrokeColor="#127BCB"
+                    app:chipStrokeWidth="2dp"
+                    app:chipBackgroundColor="#FFFFFF"
+                    android:text="Multiples Victimas"
+                    android:textSize="16dp"/>
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/btnSaveEmergency"
+            android:layout_width="238dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:onClick="InsertEmergency"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="208dp"
+            android:background="@drawable/ic_icono_ingresar"
+            android:layout_marginTop="23dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

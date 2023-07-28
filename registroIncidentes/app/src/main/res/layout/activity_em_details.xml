@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9F1F5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/flechaAtras"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="6dp"
+                android:onClick="Volver"
+                app:srcCompat="@drawable/ic_icono_flecha" />
+
+            <TextView
+                android:id="@+id/tvPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Emergencia"
+                android:textAlignment="center"
+                android:textColor="#127BCB"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnHistColor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="6dp"
+                android:onClick="ClosedEmergency"
+                app:srcCompat="@drawable/ic_icono_historial_mods" />
+
+        </RelativeLayout>
+
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/fondo_rectangular">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvEspera"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Nombre de la Emergencia"
+                    android:textAlignment="center"
+                    android:textColor="#127BCB"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="10dp"
+                    android:onClick="RefrescarLista"
+                    app:srcCompat="@drawable/ic_icono_btn_actualizar" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <TextView
+                                android:id="@+id/tvTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="T: 0"
+                                android:textSize="18sp"
+                                android:textColor="#094886"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <TextView
+                                android:id="@+id/tvTRojos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="R: 0"
+                                android:textSize="18sp"
+                                android:textColor="#094886"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <TextView
+                                android:id="@+id/tvTAmarillos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A: 0"
+                                android:textSize="18sp"
+                                android:textColor="#094886"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <TextView
+                                android:id="@+id/tvTVerdes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="V: 0"
+                                android:textSize="18sp"
+                                android:textColor="#094886"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTNegros"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="N: 0"
+                                android:textSize="18sp"
+                                android:textColor="#094886"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <ImageView
+                                android:id="@+id/ivTotal"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:onClick="SinFiltro" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:onClick="FiltrarRojo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:onClick="FiltrarAmarillo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:onClick="FiltrarVerde" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:onClick="FiltrarNegro" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        -->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_layout"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/blue_500"
+            app:tabSelectedTextColor="@color/blue_700"
+            app:tabIndicatorColor="@color/blue_700"
+            android:background="#ffffff">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="General"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heridos"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mapa"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout" />
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="88dp"
+            android:layout_marginRight="88dp"
+            android:layout_marginBottom="13dp"
+            android:visibility="gone"
+            app:fab_colorNormal="#FF5757"
+            app:fab_colorPressed="#B50E13"
+            app:fab_icon="@drawable/ic_icono_fab_borrar"
+            app:fab_size="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:visibility="visible" />
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddInjured"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="6dp"
+            app:fab_colorNormal="#127BCB"
+            app:fab_colorPressed="#094886"
+            app:fab_icon="@drawable/ic_icon_fab_injured"
+            app:fab_size="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSalEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"
+            app:fab_colorNormal="#FF5757"
+            app:fab_colorPressed="#B50E13"
+            app:fab_icon="@drawable/ic_icono_fab_equis"
+            app:fab_size="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:visibility="visible" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="81dp"
+            app:fab_colorNormal="#127BCB"
+            app:fab_colorPressed="#094886"
+            app:fab_icon="@drawable/ic_icono_fab_guardar"
+            app:fab_size="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

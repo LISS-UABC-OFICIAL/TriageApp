@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/herido_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp">
+
+        <!--<ImageView
+            android:layout_width="70dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginRight="5dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/imbase"
+            android:id="@+id/imagen"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagen"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle"/>
+
+        <LinearLayout
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtNoPaciente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NoPaciente "
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txttitleUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/recuadro_placeholder"
+                    android:textColor="#127BCB"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/recuadro_placeholder"
+                    android:textColor="#094886"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="222dp"
+                android:layout_height="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight=".8"
+                    android:background="@drawable/recuadro_placeholder"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

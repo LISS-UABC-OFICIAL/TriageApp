@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E9F1F5">
+
+    <include
+        android:id="@+id/toolbarMn"
+        layout="@layout/toolbar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/fondo_rectangular">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvEspera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Emergencias activas"
+                android:textAlignment="center"
+                android:textColor="#127BCB"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:onClick="Refresh"
+                app:srcCompat="@drawable/ic_icono_btn_actualizar" />
+                -->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shimmer_view_container">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                    <include
+                        layout="@layout/placeholder_list_emergencies"/>
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ListaHeridos"
+                android:clipToPadding="true"
+                android:layout_marginBottom="0dp">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reciclador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp" />
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="6dp"
+                    app:fab_colorNormal="#127BCB"
+                    app:fab_colorPressed="#094886"
+                    app:fab_icon="@drawable/ic_place_emergency"
+                    app:fab_size="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabRegistrarUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="81dp"
+                    app:fab_colorNormal="#127BCB"
+                    app:fab_colorPressed="#094886"
+                    app:fab_icon="@drawable/ic_icono_fab_usuario"
+                    app:fab_size="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:visibility="visible" />
+
+
+
+
+            </RelativeLayout>
+
+            <!--
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:elevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:backgroundTint="#127BCB"
+                    android:src="@drawable/ic_icono_emergencia"
+                    android:layout_margin="5dp" />
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+-->
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

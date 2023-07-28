@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Registro de Incidentes</string>
+    <string name="domainURL"></string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoic3F1aWVsIiwiYSI6ImNsNHdjbzMyZTJkOWozaXFjMDd4dGw1dnUifQ.WE9wfpsNsn4WTZ28f0d4Tg</string>
+    <string name="navigation_guidance_day" translatable="false">mapbox://styles/squiel/cl538r9pm002l16nzdvis6p5e</string>
+</resources>
